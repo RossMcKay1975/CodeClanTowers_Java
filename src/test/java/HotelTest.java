@@ -47,13 +47,29 @@ public class HotelTest {
         hotel.addBedroom(bedroom1);
         hotel.addBedroom(bedroom2);
         hotel.addBedroom(bedroom3);
-        assertEquals(3, hotel.countBedrooms());
+        assertEquals(3, hotel.bedroomCount());
     }
 
     @Test
     public void addConferenceRoomToHotel(){
         hotel.addConferenceRoom(conferenceRoom1);
         hotel.addConferenceRoom(conferenceRoom2);
-        assertEquals(2, hotel.countConferenceRooms());
+        assertEquals(2, hotel.conferenceRoomCount());
+    }
+
+    @Test
+    public void addGuestToBedroom(){
+        hotel.addGuestToBedroom(bedroom2, guest1);
+        hotel.addGuestToBedroom(bedroom2, guest2);
+        assertEquals(2, bedroom2.countGuests());
+    }
+
+    @Test
+    public void addGuestToConferenceRoom(){
+        hotel.addGuestToConferenceRoom(conferenceRoom4, guest1);
+        hotel.addGuestToConferenceRoom(conferenceRoom4, guest2);
+        hotel.addGuestToConferenceRoom(conferenceRoom4, guest3);
+        hotel.addGuestToConferenceRoom(conferenceRoom4, guest4);
+        assertEquals(4, conferenceRoom4.countGuests());
     }
 }

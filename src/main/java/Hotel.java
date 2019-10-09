@@ -10,7 +10,7 @@ public class Hotel {
         this.conferenceRooms = new ArrayList<ConferenceRoom>();
     }
 
-    public int countBedrooms() {
+    public int bedroomCount() {
         return this.bedrooms.size();
     }
 
@@ -18,11 +18,20 @@ public class Hotel {
         this.bedrooms.add(bedroom1);
     }
 
-    public int countConferenceRooms() {
+    public int conferenceRoomCount() {
         return this.conferenceRooms.size();
     }
 
     public void addConferenceRoom(ConferenceRoom conferenceRoom1) {
         this.conferenceRooms.add(conferenceRoom1);
+    }
+
+
+    public void addGuestToBedroom(Bedroom bedroom1, Guest guest) {
+        bedroom1.addGuest(guest);
+    }
+
+    public void addGuestToConferenceRoom(ConferenceRoom conferenceRoom4, Guest guest) {
+        conferenceRoom4.addGuest(guest);
     }
 }
