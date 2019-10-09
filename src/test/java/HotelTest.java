@@ -72,4 +72,20 @@ public class HotelTest {
         hotel.addGuestToConferenceRoom(conferenceRoom4, guest4);
         assertEquals(4, conferenceRoom4.countGuests());
     }
+
+    @Test
+    public void removeGuestFromBedroom(){
+        hotel.addGuestToBedroom(bedroom3, guest3);
+        hotel.addGuestToBedroom(bedroom3, guest4);
+        hotel.removeGuestFromBedroom(bedroom3, guest3);
+        assertEquals(1, bedroom3.countGuests());
+    }
+
+    @Test
+    public void removeGuestFromConferenceRoom(){
+        hotel.addGuestToConferenceRoom(conferenceRoom2, guest3);
+        hotel.addGuestToConferenceRoom(conferenceRoom2, guest4);
+        hotel.removeGuestFromConferenceRoom(conferenceRoom2, guest3);
+        assertEquals(1, conferenceRoom2.countGuests());
+    }
 }
