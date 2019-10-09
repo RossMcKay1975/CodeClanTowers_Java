@@ -26,10 +26,10 @@ public class HotelTest {
     public void before(){
         hotel = new Hotel();
 
-        bedroom1 = new Bedroom(101, 1, "Single sea view");
-        bedroom2 = new Bedroom(102, 2, "Double sea view");
-        bedroom3 = new Bedroom(103, 4, "Family pool view");
-        bedroom4 = new Bedroom(201, 3, "Family no view");
+        bedroom1 = new Bedroom(101, 1, "Single sea view", true);
+        bedroom2 = new Bedroom(102, 2, "Double sea view", false);
+        bedroom3 = new Bedroom(103, 4, "Family pool view",false);
+        bedroom4 = new Bedroom(201, 3, "Family no view", false);
 
         conferenceRoom1 = new ConferenceRoom(3, "Jura");
         conferenceRoom2 = new ConferenceRoom(2, "Glenlivet");

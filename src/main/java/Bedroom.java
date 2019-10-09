@@ -6,12 +6,14 @@ public class Bedroom {
     private int capacity;
     private String typeOfRoom;
     private ArrayList<Guest> guests;
+    private boolean booked;
 
-    public Bedroom(int roomNo, int capacity, String typeOfRoom) {
+    public Bedroom(int roomNo, int capacity, String typeOfRoom, boolean booked) {
         this.roomNo = roomNo;
         this.capacity = capacity;
         this.typeOfRoom = typeOfRoom;
         this.guests = new ArrayList<Guest>();
+        this.booked = booked;
     }
 
 
@@ -40,4 +42,6 @@ public class Bedroom {
     public void removeGuest(Guest guest) {
         this.guests.remove(guest);
     }
+
+    public void checkRoomBooked()
 }
