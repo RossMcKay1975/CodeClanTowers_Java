@@ -19,4 +19,15 @@ public class ConferenceRoom {
     public String getRoomName() {
         return this.roomName;
     }
+
+    public void addGuest(Guest guest1) {
+        if (this.capacity > this.countGuests()){
+            this.guests.add(guest1);
+        }
+    }
+
+    public int countGuests(){
+        return this.guests.size();
+    }
 }
+
