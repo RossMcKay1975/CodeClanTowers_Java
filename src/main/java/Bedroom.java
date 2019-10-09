@@ -18,4 +18,12 @@ public class Bedroom {
     public int hasCapacity() {
         return this.capacity;
     }
+
+    public int getRoomNo() {
+        return this.roomNo;
+    }
+
+    public String getRoomType() {
+        return this.typeOfRoom;
+    }
 }

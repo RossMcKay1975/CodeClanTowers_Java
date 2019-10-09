@@ -20,10 +20,14 @@ public class BedroomTest {
         assertEquals(1, bedroom.hasCapacity());
     }
 
-//    @Test
-//    public void canCheckHasRoomNumber(){
-//        assertEquals(101, bedroom.hasRoomNumber());
-//    }
-//
+    @Test
+    public void canCheckHasRoomNumber(){
+        assertEquals(101, bedroom.getRoomNo());
+    }
+
+    @Test
+    public void checkTypeOfRoom(){
+        assertEquals("single", bedroom.getRoomType());
+    }
 
 }
